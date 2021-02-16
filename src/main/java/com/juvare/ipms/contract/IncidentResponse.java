@@ -14,7 +14,7 @@ public class IncidentResponse {
 
     private String name;
 
-    @JsonFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern="yyyy-MM-dd", timezone = "GMT+02:00")
     @JsonProperty("start_date")
     private Date startDate;
 
