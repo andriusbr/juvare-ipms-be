@@ -1,9 +1,9 @@
 package com.juvare.ipms.contract;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.juvare.ipms.model.Incident;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -14,7 +14,7 @@ public class IncidentResponse {
 
     private String name;
 
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern="yyyy-MM-dd")
     @JsonProperty("start_date")
     private Date startDate;
 
