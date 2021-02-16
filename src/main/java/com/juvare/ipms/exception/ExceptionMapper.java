@@ -15,7 +15,7 @@ public class ExceptionMapper {
     public ResponseEntity<ErrorResponse> handleAuthorizationServiceException(AuthorizationServiceException exception){
         String errMsg = exception.getMessage();
         log.debug(errMsg, exception);
-        ErrorResponse error = new ErrorResponse(errMsg, null);
+        ErrorResponse error = new ErrorResponse(errMsg);
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 }
